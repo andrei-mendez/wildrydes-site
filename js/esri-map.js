@@ -34,9 +34,9 @@ WildRydes.map = WildRydes.map || {};
             WildRydes.marker.remove();
     };
 
-    // Function to retrieve weather data from OpenWeatherMap API
+   // Function to retrieve weather data from OpenWeatherMap API
     function getWeatherData(latitude, longitude) {
-        var apiKey = '7047dfe3a8d8d2e26bbb76e0c853b8e5';
+        var apiKey = 'YOUR_API_KEY';
         var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&appid=' + apiKey;
 
         // Make AJAX request to OpenWeatherMap API
@@ -50,6 +50,9 @@ WildRydes.map = WildRydes.map || {};
 
                 // Adjust animation based on weather conditions
                 adjustAnimation(weather.main);
+
+                // Display weather information in the panel
+                $('#weatherInfo').html('Weather: ' + weather.main + '<br>Temperature: ' + main.temp + '°C');
             },
             error: function(xhr, status, error) {
                 console.error('Error fetching weather data:', error);
