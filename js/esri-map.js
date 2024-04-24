@@ -36,7 +36,7 @@ WildRydes.map = WildRydes.map || {};
 
    // Function to retrieve weather data from OpenWeatherMap API
     function getWeatherData(latitude, longitude) {
-        var apiKey = 'YOUR_API_KEY';
+        var apiKey = '7047dfe3a8d8d2e26bbb76e0c853b8e5';
         var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&appid=' + apiKey;
 
         // Make AJAX request to OpenWeatherMap API
